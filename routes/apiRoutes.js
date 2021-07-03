@@ -9,6 +9,7 @@ router.get("/workouts", (req, res) => {
       res.json(dbWorkouts);
     })
     .catch((err) => {
+      console.log("/workouts", err);
       res.status(400).json(err);
     });
 });
@@ -23,6 +24,7 @@ router.get("/api/workouts/range", (req, res) => {
       res.json(dbWorkouts);
     })
     .catch((err) => {
+      console.log("/api/workouts/range", err);
       res.status(400).json(err);
     });
 });
@@ -33,6 +35,7 @@ router.post("/api/workouts", ({ body }, res) => {
       res.json(dbWorkout);
     })
     .catch((err) => {
+      console.log("/api/workouts", err);
       res.status(400).json(err);
     });
 });
@@ -44,6 +47,7 @@ router.put("/api/workouts/:id", (req, res) => {
       res.json(dbWorkout);
     })
     .catch((err) => {
+      console.log("/api/workouts/:id", err);
       res.status(400).json(err);
     });
 });
@@ -54,6 +58,7 @@ router.delete("/api/workouts", ({ body }, res) => {
       res.json(true);
     })
     .catch((err) => {
+      console.log("/api/workouts", err);
       res.status(400).json(err);
     });
 });
