@@ -1,12 +1,14 @@
 # Workout Tracker
 
-Create Mongo database with a Mongoose schema and handle routes with Express
+This app is a Mongo database with a Mongoose schema and handle routes with Express.
+
+![Screenshot](workouttracker.png)
 
 ## User Story
 
 - As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
 
-The user should be able to:
+The user can:
 
 - Add exercises to the most recent workout plan.
 
@@ -16,18 +18,20 @@ The user should be able to:
 
 - View the total duration of each workout from the past seven workouts on the `stats` page.
 
-> **Important:** Look into using a MongoDB aggregate function to dynamically add up and return the total duration for each workout. Check out the [MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/), the [MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/), and the [Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) to learn how it can be accomplished.
+## Links
 
-## Deployment
+[Deployed Link](https://nameless-earth-51895.herokuapp.com/)
 
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
+[Github Repo](https://github.com/MatteoThomas/workout-tracker)
 
-- [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
+[Video Walkthrough](https://drive.google.com/file/d/1ycGnB6HJubHDIP50NvxSlSp9fQo0CAof/view)
 
-- [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
+## Contributor
 
-## Submission
+Matthew Elliott
 
-- The URL to the deployed application
+[Email](mailto:matt.ell@pm.me)
 
-- The URL to the GitHub repository
+[Github](https://github.com/MatteoThomas/)
+
+[LinkedIn](https://www.linkedin.com/in/matthewell/)
