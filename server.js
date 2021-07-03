@@ -1,25 +1,27 @@
 const express = require("express");
+const path = require("path");
 const mongoose = require("mongoose");
 
-const PORT = process.env.PORT || 3000;
-
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// exposes public folder to front end
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/exercise", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/Fitness-Tracker",
+  {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  }
+);
 
-// routes
-require('./routes/htmlRoutes')(app);
-
-app.use(require("./routes/apiRoutes.js"));
+app.use(require("./routes/apiRoutes"));
+app.use(require("./routes/htmlRoutes"));
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
